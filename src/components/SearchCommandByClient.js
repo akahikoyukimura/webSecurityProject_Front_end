@@ -76,24 +76,24 @@ console.log(user);
                     (function () {
                       if (commands) {
                           return <>
-                          <div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100">
+                          <div className="container-table100">
+			<div className="wrap-table100">
+				<div className="table100">
 					<table>
 						<thead>
-							<tr class="table100-head">
-								<th class="column1">Date</th>
-								<th class="column2">Command ID</th>
-								<th class="column3">Client</th>
+							<tr className="table100-head">
+								<th className="column1">Date</th>
+								<th className="column2">Command ID</th>
+								<th className="column3">Client</th>
 							</tr>
 						</thead>
 						<tbody>
             {commands &&
                       commands.map((command) => (
                         <tr key={command.id}>
-									<td class="column1">{command.date}</td>
-									<td class="column2">{command.id}</td>
-									<td class="column3">{command.client.nom}</td>
+									<td className="column1">{command.date}</td>
+									<td className="column2">{command.id}</td>
+									<td className="column3">{command.client.nom}</td>
 								</tr>
                       ))}
 								

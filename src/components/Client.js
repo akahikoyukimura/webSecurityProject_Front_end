@@ -87,26 +87,26 @@ function Client() {
                     (function () {
                       if (users) {
                           return <>
-                          <div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100">
+                          <div className="container-table100">
+			<div className="wrap-table100">
+				<div className="table100">
 					<table>
 						<thead>
-							<tr class="table100-head">
-								<th class="column1">Client ID</th>
-								<th class="column2">Nom</th>
-								<th class="column3">Prenom</th>
-                <th class="column3">Age</th>
+							<tr className="table100-head">
+								<th className="column1">Client ID</th>
+								<th className="column2">Nom</th>
+								<th className="column3">Prenom</th>
+                <th className="column3">Age</th>
 							</tr>
 						</thead>
 						<tbody>
             {users &&
                       users.map((user) => (
                         <tr key={user.id}>
-									<td class="column1">{user.id}</td>
-									<td class="column2">{user.nom}</td>
-									<td class="column3">{user.prenom}</td>
-                  <td class="column4">{user.age}</td>
+									<td className="column1">{user.id}</td>
+									<td className="column2">{user.nom}</td>
+									<td className="column3">{user.prenom}</td>
+                  <td className="column4">{user.age}</td>
 								</tr>
                       ))}
 								

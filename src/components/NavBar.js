@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div class="nav">
-      <Link to="/" class="nav-link">
+    <div className="nav">
+      <Link to="/" className="nav-link">
         CLIENT
       </Link>
-      <Link to="/command" class="nav-link">
+      <Link to="/command" className="nav-link">
         COMMAND
       </Link>
-      <Link to="/searchCommandsByClient" class="nav-link">
+      <Link to="/searchCommandsByClient" className="nav-link">
         CLIENT'S COMMANDS
       </Link>
     </div>
