@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import API from '../../Api';
 
 function AddClient(props) {
   console.log(props.data);
@@ -7,7 +8,7 @@ function AddClient(props) {
   const handleSubmit = event => {
     event.preventDefault();
     
-    axios.post(`http://localhost:8080/api/users`, { 
+    API.post(`api/users`, { 
         nom:props.data.nom,
         prenom:props.data.prenom,
         age:props.data.age

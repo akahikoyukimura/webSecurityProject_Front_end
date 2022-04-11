@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import API from '../../Api';
 
 function UpdateClient(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
     
-        axios
-          .patch(`http://localhost:8080/api/users/${props.data.id}`, {
+        API
+          .patch(`api/users/${props.data.id}`, {
             nom:props.data.nom,
         prenom:props.data.prenom,
         age:props.data.age

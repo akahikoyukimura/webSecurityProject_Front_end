@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import API from '../../Api';
 
 function ShowAllClients({ name, onNameChange }) {
     const handleSubmit = event => {
         event.preventDefault();
         
-        axios.get(`http://localhost:8080/api/users`)
+        API.get(`api/users`)
           .then(res => {
             console.log(res);
             console.log(res.data);

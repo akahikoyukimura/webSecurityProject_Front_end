@@ -8,14 +8,15 @@ import UpdateCommand from "./CmdHandler/UpdateCommand";
 import DeleteCommand from "./CmdHandler/DeleteCommand";
 import SearchCommand from "./CmdHandler/SearchCommand";
 import ShowAllCommands from "./CmdHandler/ShowAllCommands";
+import API from '../Api';
 
 function Command() {
   const [users, setUsers] = useState(null);
   const [commands, setCommands] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:8080/api/users`)
+    API
+      .get(`api/users`)
       .then((res) => {
         setUsers(res.data);
       })

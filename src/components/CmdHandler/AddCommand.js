@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import API from '../../Api';
 
 function AddCommand(props) {
   console.log(props.data);
@@ -7,7 +8,7 @@ function AddCommand(props) {
   const handleSubmit = event => {
     event.preventDefault();
     
-    axios.post(`http://localhost:8080/api/commands`, { 
+    API.post(`api/commands`, { 
         date:props.data.date,
         client:props.data.client
      })

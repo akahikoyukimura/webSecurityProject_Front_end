@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
+import API from '../../Api';
 
 function UpdateCommand(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios
-      .patch(`http://localhost:8080/api/commands/${props.data.id}`, {
+    API
+      .patch(`api/commands/${props.data.id}`, {
         date: props.data.date,
         client: props.data.client,
       })

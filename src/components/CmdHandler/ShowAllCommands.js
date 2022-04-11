@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
+import API from '../../Api';
 
 function ShowAllCommands({ name, onNameChange }) {
 
   const handleSubmit = event => {
     event.preventDefault();
     
-    axios.get(`http://localhost:8080/api/commands`)
+    API.get(`api/commands`)
       .then(res => {
         console.log(res);
         console.log(res.data);

@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
+import API from '../../Api';
 
 function DeleteCommand(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
     
-        axios
-          .delete(`http://localhost:8080/api/commands/${props.data.id}`)
+        API
+          .delete(`api/commands/${props.data.id}`)
           .then((res) => {
             console.log(res);
             console.log(res.data);

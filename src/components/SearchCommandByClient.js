@@ -29,15 +29,6 @@ function SearchCommandByClient() {
   const [user, setUser] = useState('');
 console.log(user);
 
-// useEffect(() => {
-    
-//     axios.get(`http://localhost:8080/api/users/${user}/commands`)
-//       .then(res => {
-//         console.log(res);
-//         console.log(res.data);
-//         setCommands(res.data);
-//       })
-//   }, [commands]);
   return (
     <div className="page-wrapper bg-red p-t-180 p-b-100 font-robo">
       

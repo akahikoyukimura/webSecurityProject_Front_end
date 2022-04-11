@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "axios";
 import { BsSearch } from 'react-icons/bs';
 import { useState } from "react";
+import API from '../../Api';
 
 function SearchCommand({ name, onNameChange }) {
     
@@ -11,8 +12,8 @@ function SearchCommand({ name, onNameChange }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios
-      .get(`http://localhost:8080/api/commands/${cmd}`)
+    API
+      .get(`api/commands/${cmd}`)
       .then((res) => {
         console.log(res);
         console.log(res.data);

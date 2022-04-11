@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "axios";
 import { BsSearch } from 'react-icons/bs';
 import { useState } from "react";
+import API from '../../Api';
 
 function SearchClient({ name, onNameChange }) {
     const [cmd, setcmd] = useState('');
@@ -10,8 +11,8 @@ function SearchClient({ name, onNameChange }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios
-      .get(`http://localhost:8080/api/users/${cmd}`)
+    API
+      .get(`api/users/${cmd}`)
       .then((res) => {
         console.log(res);
         console.log(res.data);
