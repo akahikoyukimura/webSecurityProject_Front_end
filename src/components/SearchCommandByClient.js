@@ -9,6 +9,7 @@ import DeleteCommand from "./CmdHandler/DeleteCommand";
 import SearchCommand from "./CmdHandler/SearchCommand";
 import ShowAllCommands from "./CmdHandler/ShowAllCommands";
 import ShowAllClientCommands from "./ClientCommands/ShowAllClientCommands";
+import API from '../Api';
 
 function SearchCommandByClient() {
     const [users, setUsers] = useState(null);
@@ -16,8 +17,8 @@ function SearchCommandByClient() {
   console.log(commands);
 
   useEffect(() => {
-    axios
-      .get(`https://secure-test-web.herokuapp.com/api/users`)
+    API
+      .get(`api/users`)
       .then((res) => {
         setUsers(res.data);
       })
