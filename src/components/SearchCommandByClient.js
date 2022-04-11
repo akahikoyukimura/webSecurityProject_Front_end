@@ -17,7 +17,7 @@ function SearchCommandByClient() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/users`)
+      .get(`https://secure-test-web.herokuapp.com/api/users`)
       .then((res) => {
         setUsers(res.data);
       })
