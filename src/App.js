@@ -8,6 +8,7 @@ import SearchCommandByClient from "./components/SearchCommandByClient";
 function App() {
   return (
     <>
+      <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<Client />} />
@@ -17,6 +18,7 @@ function App() {
           element={<SearchCommandByClient />}
         />
       </Routes>
+      </div>
     </>
   );
 }

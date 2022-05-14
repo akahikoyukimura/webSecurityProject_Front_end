@@ -247,6 +247,49 @@
     padding: 14px;
   }
   
+  .input-upload{
+    display: flex;
+  }
+  .p-input-file{
+    color: #d8000099;
+    font-size: xx-small;
+    position: relative;
+    top: -30px;
+  }
+  .alert-upload {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #dc4f4fb8;
+    color: white;
+  }
+  .alert-upload-success{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #4fdc96b8;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
   .table-condensed td, .table-condensed th {
     font-size: 14px;
     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
@@ -503,7 +546,7 @@
   .row-buttons{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .inner-form {

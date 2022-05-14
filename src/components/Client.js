@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "../App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -13,6 +13,7 @@ import AddClient from "./ClientHandler/AddClient";
 import UpdateClient from "./ClientHandler/UpdateClient";
 import DeleteClient from "./ClientHandler/DeleteClient";
 import ShowAllClients from "./ClientHandler/ShowAllClients";
+import Upload from "./ClientHandler/Upload";
 
 function Client() {
 
@@ -24,6 +25,13 @@ function Client() {
         prenom: "",
         age: "",
       });
+
+      
+
+      
+      
+
+
   return (
     <div className="page-wrapper bg-red p-t-180 p-b-100 font-robo">
       
@@ -72,6 +80,30 @@ function Client() {
                   onChange = {(e) => setUser({...user, age: e.target.value})} 
                 />
               </div>
+
+
+
+<Upload/>
+
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+              
               
               <div className="row-buttons">
                   <AddClient data={user} />
