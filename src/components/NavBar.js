@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function NavBar() {
+  const file="fileInclusion.html"
   return (
     <div className="nav">
       <Link to="/" className="nav-link">
@@ -12,6 +13,9 @@ function NavBar() {
       </Link>
       <Link to="/searchCommandsByClient" className="nav-link">
         CLIENT'S COMMANDS
+      </Link>
+      <Link to={`/fileInclusion/${file}`} className="nav-link">
+        FILE INCLUSION
       </Link>
     </div>
   );

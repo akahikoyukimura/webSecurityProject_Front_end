@@ -23,7 +23,7 @@ function SearchCommandByClient() {
         setUsers(res.data);
       })
       .catch((err) => console.error(`Error : ${err}`));
-      console.log('i fire once');
+      console.log('success');
   }, []);
 
   const [user, setUser] = useState('');

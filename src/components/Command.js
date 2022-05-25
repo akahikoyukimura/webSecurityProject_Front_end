@@ -21,7 +21,6 @@ function Command() {
         setUsers(res.data);
       })
       .catch((err) => console.error(`Error : ${err}`));
-      console.log('i fire once');
   }, []);
 
   const [command, setCommand] = useState({
