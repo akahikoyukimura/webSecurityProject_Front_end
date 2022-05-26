@@ -6,6 +6,8 @@ import Client from "./components/Client";
 import SearchCommandByClient from "./components/SearchCommandByClient";
 import FileInclusion from "./components/FileInclusion";
 import CommandExecution from "./components/CommandExecution";
+import Emission from "./components/Emission";
+import Reception from "./components/Reception";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         />
         <Route path="/fileInclusion/:file" element={<FileInclusion />} />
         <Route path="/ping" element={<CommandExecution />} />
+        <Route path="/emission" element={<Emission />} />
+        <Route path="/reception/:id" element={<Reception />} />
       </Routes>
       </div>
     </>

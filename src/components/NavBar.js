@@ -20,6 +20,9 @@ function NavBar() {
       <Link to="ping" className="nav-link">
         COMMAND EXE
       </Link>
+      <Link to="/emission" className="nav-link">
+        EMISSION
+      </Link>
     </div>
   );
 }
