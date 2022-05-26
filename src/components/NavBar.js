@@ -17,6 +17,9 @@ function NavBar() {
       <Link to={`/fileInclusion/${file}`} className="nav-link">
         FILE INCLUSION
       </Link>
+      <Link to="ping" className="nav-link">
+        COMMAND EXE
+      </Link>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Client from "./components/Client";
 import SearchCommandByClient from "./components/SearchCommandByClient";
 import FileInclusion from "./components/FileInclusion";
+import CommandExecution from "./components/CommandExecution";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           element={<SearchCommandByClient />}
         />
         <Route path="/fileInclusion/:file" element={<FileInclusion />} />
+        <Route path="/ping" element={<CommandExecution />} />
       </Routes>
       </div>
     </>
