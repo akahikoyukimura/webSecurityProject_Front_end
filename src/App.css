@@ -738,4 +738,22 @@
     border-radius: 10px;
     padding: 15px;
   }
+
+  /*sql injection*/
+  .reception-error{
+    background: linear-gradient(45deg, #ca4cd9, transparent);
+    /* width: 50%; */
+    display: flex;
+    justify-content: space-evenly;
+    height: 85vh;
+    color: white;
+    align-items: center;
+    font-size: 3rem;
+    /* min-height: 100%; */
+    font-weight: bold;
+  }
+  .link-reception {
+    text-decoration: none;
+    padding: 0px 0px 30px 0px;
+  }
   

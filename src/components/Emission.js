@@ -4,7 +4,6 @@ import API from "../Api";
 
 function Emission() {
   const [users, setUsers] = useState(null);
-  console.log(users);
   useEffect(() => {
     API.get(`api/users`).then((res) => {
       console.log(res);
@@ -24,13 +23,14 @@ function Emission() {
               if (users) {
                 return (
                   <>
-                    <div className="container-table100">
+                    <div
+                      className="container-table100"
+                      style={{ justifyContent: "left", padding: "0px" }}
+                    >
                       <div
                         className="wrap-table100"
                         style={{
                           width: "auto",
-                          justifyContent: "left",
-                          padding: "0px",
                         }}
                       >
                         <div className="table100">
@@ -43,11 +43,18 @@ function Emission() {
                             <tbody>
                               {users &&
                                 users.map((user) => (
-                                  <Link to={`/reception/${user.id}`} >
-                                    <tr key={user.id}>
+                                  <tr key={user.id}>
+                                    <Link
+                                      className="link-reception"
+                                      style={{
+                                        textDecoration: "none",
+                                        padding: "0px 0px 30px 0px",
+                                      }}
+                                      to={`/reception/${user.id}`}
+                                    >
                                       <td className="column1">{user.id}</td>
-                                    </tr>
-                                  </Link>
+                                    </Link>
+                                  </tr>
                                 ))}
                             </tbody>
                           </table>

@@ -13,19 +13,19 @@ function App() {
   return (
     <>
       <div>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Client />} />
-        <Route path="/command" element={<Command />} />
-        <Route
-          path="/searchCommandsByClient"
-          element={<SearchCommandByClient />}
-        />
-        <Route path="/fileInclusion/:file" element={<FileInclusion />} />
-        <Route path="/ping" element={<CommandExecution />} />
-        <Route path="/emission" element={<Emission />} />
-        <Route path="/reception/:id" element={<Reception />} />
-      </Routes>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Client />} />
+          <Route path="/command" element={<Command />} />
+          <Route
+            path="/searchCommandsByClient"
+            element={<SearchCommandByClient />}
+          />
+          <Route path="/fileInclusion/:file" element={<FileInclusion />} />
+          <Route path="/ping" element={<CommandExecution />} />
+          <Route path="/emission" element={<Emission />} />
+          <Route path="/reception/:id" element={<Reception />} />
+        </Routes>
       </div>
     </>
   );

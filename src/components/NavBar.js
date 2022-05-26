@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function NavBar() {
-  const file="fileInclusion.html"
+  const file = "fileInclusion.html";
   return (
     <div className="nav">
       <Link to="/" className="nav-link">

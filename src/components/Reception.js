@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import API from "../Api";
 
 function Reception() {
   const { id } = useParams();
-  //const location = useLocation();
-  //const { id } = location.state;
 
   const [commands, setCommands] = useState(null);
+  const [error, setError] = useState(false);
+  console.log(error);
 
   //validate the parameter
+  function containsSpecialChars(str) {
+    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return specialChars.test(str);
+  }
+
   useEffect(() => {
-    API.get(`api/reception/${id}`).then((res) => {
-      console.log(res);
-      console.log(res.data.id);
-      setCommands(res.data);
-    });
+    if (containsSpecialChars(id) || isNaN(id)) {
+      setError(true);
+    } else {
+      setError(false);
+      API.get(`api/reception/${id}`).then((res) => {
+        setCommands(res.data);
+      });
+    }
   }, []);
 
   return (
@@ -55,6 +63,8 @@ function Reception() {
           );
         }
       })()}
+
+      {error && <div className="reception-error">NOT FOUND</div>}
     </>
   );
 }
